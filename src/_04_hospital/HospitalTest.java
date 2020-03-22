@@ -89,8 +89,8 @@ public class HospitalTest extends TestCase {
 		try {
 			testDoctor.assignPatient(new Patient());
 			assertTrue(false);
-		} catch (DoctorFullException dfe) {
-			assertTrue(true);
+		} catch (Exception e) {
+			assertTrue(true);s
 		}
 assertTrue(testDoctor.getPatients().size() == 3);
 	}
