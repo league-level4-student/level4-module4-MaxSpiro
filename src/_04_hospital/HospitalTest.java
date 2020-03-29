@@ -90,16 +90,24 @@ public class HospitalTest extends TestCase {
 			testDoctor.assignPatient(new Patient());
 			assertTrue(false);
 		} catch (Exception e) {
-			assertTrue(true);s
+			assertTrue(true);
 		}
 assertTrue(testDoctor.getPatients().size() == 3);
 	}
 
 	public void test8Patients() throws Exception {
 		// TODO: add 3 doctors to hospital
-
+		int x=0;
+		while(x<3) {
+			testHospital.addDoctor(new Doctor());
+			x++;
+		}
 		// TODO: add 8 patients to hospital
-
+		x=0;
+		while(x<8) {
+			testHospital.addPatient(new Patient());
+			x++;
+		}
 		// hospital assigns patients to doctors
 		testHospital.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
